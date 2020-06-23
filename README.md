@@ -2,9 +2,10 @@
 
 # blockly-react-sample [![Built on Blockly](https://tinyurl.com/built-on-blockly)](https://github.com/google/blockly)
 
-This sample shows how to load Blockly in a [React](https://reactjs.org/) project.
 
-## Running the sample
+Este exemplo mostra como carregar o Blockly em um projeto  [React](https://reactjs.org/) 
+
+## UpRobotics
 
 ### Installation
 
@@ -17,6 +18,16 @@ npm install
 ```
 npm run start
 ```
+### Instalar o módulo para manusear as rotas:
+``` 
+npm install --save react-router-dom
+```
+
+### Instalar o materialize:
+``` 
+npm i -S materialize-css
+``` 
+
 
 ### Browse
 

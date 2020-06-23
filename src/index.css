@@ -19,3 +19,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.marginup{
+  margin-top: 2%;
+}
+a.marginleft{
+margin-left: 3%;
+}
+b.marginleft{
+margin-left: 3%;
+}
