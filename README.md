@@ -1,11 +1,11 @@
 [Home](../README.md)
 
-# blockly-react-sample [![Built on Blockly](https://tinyurl.com/built-on-blockly)](https://github.com/google/blockly)
+# Ferramenta de linguagem visual baseada em blocos  [![Built on Blockly](https://tinyurl.com/built-on-blockly)](https://github.com/google/blockly)
 
 
-Este exemplo mostra como carregar o Blockly em um projeto  [React](https://reactjs.org/) 
+UpRobotics (Unplugged Robotics) é uma ferramenta focada em Robótica Educacional que utiliza métodos desplugados e linguagem visual baseada em blocos arrastáveis. Ela é construída usando a tecnologia Google Blocklys, MaterializeCSS, NodeJS e React JS. Este exemplo mostra como carregar o Blockly em um projeto  [React](https://reactjs.org/). Isso faz parte de um projeto de dissertação de mestrado voltado para a área de Internet das Coisas e Educação. 
 
-## UpRobotics
+## UpRobotics 
 
 ### Installation
 
