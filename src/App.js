@@ -47,7 +47,7 @@ class App extends React.Component {
 
       <div>
         <Navbar />
-        {/*     <Routes /> */}
+        {/* <Routes /> */}
          <Footer /> 
       </div>
     );

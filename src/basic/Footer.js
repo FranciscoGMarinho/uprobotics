@@ -3,10 +3,10 @@ import React from 'react';
 class Footer extends React.Component{
     render(){
         return (
-            <footer class="page-footer teal lighten-2 " >
+            <footer class="page-footer primary-color " >
                 <div class="container" >
                     <div class="row">
-                    <div class="col s3">
+                    <div class="col s12 m3 l3">
                         <h5 class="white-text">Apoio</h5>
                             <ul>
                                 <li><a class="grey-text text-lighten-3" href="#!">CAPES</a></li>
@@ -15,7 +15,7 @@ class Footer extends React.Component{
                                 <li><a class="grey-text text-lighten-3" href="#!">PPGI</a></li>
                             </ul>
                         </div>
-                        <div class="col s3">
+                        <div class="col s12 m3 l3">
                         <h5 class="white-text">Comunidades</h5>
                             <ul>
                                 <li><a class="grey-text text-lighten-3" href="#!">Fórum de discussão</a></li>
@@ -23,7 +23,7 @@ class Footer extends React.Component{
         
                             </ul>
                         </div>  
-                        <div class="col s3">
+                        <div class="col s12 m3 l3">
                         <h5 class="white-text">Sobre</h5>
                             <ul>
                                 <li><a class="grey-text text-lighten-3" href="#!">Acerca do UpRobotics</a></li>
@@ -32,7 +32,7 @@ class Footer extends React.Component{
                                 <li><a class="grey-text text-lighten-3" href="#!">Para Indústria</a></li>
                             </ul>
                         </div>
-                        <div class="col s3">
+                        <div class="col s12 m3 l3">
                         <h5 class="white-text">Legislação</h5>
                             <ul>
                                 <li><a class="grey-text text-lighten-3" href="#!">Termos de Uso</a></li>

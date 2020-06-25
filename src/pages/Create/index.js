@@ -31,25 +31,34 @@ class Create extends React.Component {
     return (
 
       <Fragment>
-        <div class="row">
-          <div class="col s12">
-            <section id="page-breadcrumb" class="back">
-              <div class="vertical-center sun">
-                <div class="container">
-                  <div class="row">
-                    <div class="action">
-                      <div class="col-sm-12 " id="scrollingPosition">
-                        <h3 class="title font-qdash"><i class="Small material-icons">touch_app</i>Use a sua criatividade! <i class="medium material-icons">mouse</i></h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-        </div>
-        <div class="row">
+        <nav class="breadcrumb-color">
+          <div class="nav-wrapper  container ">
             <div class="col s12">
+              <a href="#!" class="breadcrumb">Home</a>
+              <a href="#!" class="breadcrumb">Explorar</a>
+            </div>
+          </div>
+        </nav>
+
+        <div class="primary-color-light-2">
+          {/* class"section" define a altura da página */}
+          <section className="section  valign-wrapper  container">
+
+            {/* title */}
+            <div className="row center-align ">
+              <div className="col s12 ">
+                texto
+              </div>
+            </div>
+            {/* fim: Title */}
+          </section>
+        </div>
+
+
+        {/* tela de código */}
+        <div class="row ">
+          <div class="col s12 red">
+
             <BlocklyComponent ref={this.simpleWorkspace}
               readOnly={false} trashcan={true} media={'media/'}
               move={{
@@ -58,10 +67,10 @@ class Create extends React.Component {
                 wheel: true
               }}
               initialXml={`
-<xml xmlns="http://www.w3.org/1999/xhtml">
-<block type="controls_ifelse" x="0" y="0"></block>
-</xml>
-      `}>
+                  <xml xmlns="http://www.w3.org/1999/xhtml">
+                  <block type="controls_ifelse" x="0" y="0"></block>
+                  </xml>
+                        `}>
 
               <Block type="test_react_field" />
               <Block type="test_react_date_field" />
@@ -88,8 +97,10 @@ class Create extends React.Component {
                 </Value>
               </Block>
             </BlocklyComponent>
-            </div>
+          </div>
         </div>
+        {/* Fim: tela de codigo */}
+
       </Fragment>
     );
   }

@@ -1,0 +1,231 @@
+
+/* title */
+@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic&display=swap');
+/* corpo */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap'); 
+/* button */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@700&display=swap');
+
+
+:root {
+   
+    --primary-color-light: #fff3e0;
+    --primary-color-light-2: #f6f5f7;
+    /* roxo */
+    --primary-color: #4a148c;
+    /* laranja */
+    /* --primary-color: #fb8c00 */
+  }
+
+
+/* fontes */
+body{
+     font-family: 'Ubuntu Condensed', sans-serif;
+
+}
+
+body .title{
+    font-family: 'Carrois Gothic', sans-serif;
+    font-weight: bold; 
+}
+
+.btn{
+    font-family: 'karla', sans-serif; 
+}
+
+
+/* cores do meu site */
+.primary-color{
+    background-color: var(--primary-color);
+}
+
+.primary-color-light{
+    background-color: var(--primary-color-light);
+}
+
+.primary-color-light-2{
+    background-color: var(--primary-color-light-2);
+}
+.primary-color-text-light-2{
+    color: var(--primary-color-light-2);
+}
+
+.primary-color-text{
+    color: var(--primary-color);
+  
+}
+
+/* ocupando toda a tela */
+.primary-section {
+    /* display: flex; */
+    min-height: 90vh;
+    /* flex-direction: column; */
+
+    /* background-image: url("../images/Robot.png"); */
+   
+}
+.section {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* buttom navBar */
+i.right {
+    margin-left: 0px;
+}
+.bold{
+    font-weight: bold;
+}
+/* color and font navBar */
+nav .brand-logo {
+    color: var(--primary-color);
+    font-size: 21px;
+    font-weight: bold;
+}
+
+/* linha de divisão das section */
+.divider {
+    height: 1px;
+    background-color: var(--primary-color);;
+}
+
+/* margem do tema */
+.tema {
+    margin-bottom: 100px
+} 
+
+
+/* buttons */
+.btn-play {
+    /* border: 1px solid #e65100; */
+    background-color: var(--primary-color);
+    color: white;
+    line-height: 0px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: bold;
+ 
+  
+}
+
+.btn-play:hover {
+    background-color: var(--primary-color);
+    font-size: 11px;
+    transition:  0.2s;
+    
+}
+
+.btn-user{
+    background-color:white;
+    color: var(--primary-color);;
+    border-radius: 30px;
+    padding: 0 10px;
+    font-weight: bold;
+    font-size: 12px;
+   
+}
+.btn-user:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transition:  0.5s;
+}
+
+.btn-floating i {
+    background-color: var(--primary-color);;
+    color: white;
+}
+.btn-floating i:hover {
+    background-color:  white; 
+    color: var(--primary-color);
+    transition:  0.5s;
+}
+
+
+
+
+/* icon do btn user */
+i.right {
+    margin-left: 5px;
+}
+
+/************
+ *  SIDNAV 
+ ************/
+.sidenav{
+    background-color: var(--primary-color);
+    /* border radius do sidbar */
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.sidenav li>a {
+    font-size: 16px;
+}  
+/* user view */
+.user-view{
+    min-height: 30vh;
+ 
+}
+
+/* centralizando icon */
+.user-view a{
+    left: 20%;
+}
+/* alterando a largura */
+.sidenav {
+    width: 200px;
+}
+
+
+/************
+ * NAVBAR 
+ ************/
+nav ul a {
+    font-size: 17px;
+}
+
+/************
+ * CARDS 
+ ************/
+
+.card {
+    border-radius: 10px;
+}
+
+.card .card-image img {
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 10px solid white;
+}
+
+.card .card-image .card-title {
+    color: var(--primary-color);
+}
+
+
+
+/* imagem back-groud da pagina main*/
+.wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.row {
+    z-index: 1;
+}
+
+/* breadcrumb */
+
+.breadcrumb-color{
+    background-color: var( --primary-color-light-2);
+    
+}
+.breadcrumb-color .breadcrumb{
+    color: var( --primary-color);
+}
+.breadcrumb:before {
+    color: var( --primary-color);
+}
