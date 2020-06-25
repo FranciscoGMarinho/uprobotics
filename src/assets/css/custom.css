@@ -66,7 +66,7 @@ body .title{
 }
 .section {
     display: flex;
-    min-height: 100vh;
+    min-height: 80vh;
     flex-direction: column;
 }
 
@@ -169,7 +169,14 @@ i.right {
 
 /* centralizando icon */
 .user-view a{
+    color: white;
     left: 20%;
+}
+.center-icon{
+    /* text-align: -webkit-center;
+     */
+     
+    justify-content: center;
 }
 /* alterando a largura */
 .sidenav {
@@ -228,4 +235,11 @@ nav ul a {
 }
 .breadcrumb:before {
     color: var( --primary-color);
+}
+
+
+/* opacidade do sidebar */
+.element.style {
+    display: block;
+    opacity: 0;
 }
