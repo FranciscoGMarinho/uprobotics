@@ -35,9 +35,10 @@ class Tips extends React.Component {
           <section className="section  valign-wrapper  container">
 
             {/* 1ª linha */}
-            <div className="row center-align ">
+            <div className="row left-align ">
               <div className="col s12 ">
-                <h5 class='primary-color-text'>Veja alguns exemplos..</h5>
+                <h4 class='primary-color-text'>Veja alguns exemplos..</h4>
+                
               </div>
 
               {/* 2ª linha */}
@@ -47,9 +48,11 @@ class Tips extends React.Component {
                 <div className="col s12 m4 l4 ">
                   <div class="card">
                     <div class="card-image">
-                      <img src={Back} />
+                      <img src={Back} />                      
+                      <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">play_circle_filled</i></a>
                     </div>
-                    <div class="card-content primary-color-text ">
+                    <div class="card-content primary-color-text  card-backgroud ">
+                    <span class="card-title">Card Title</span>
                       <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
                     </div>
                   </div>
@@ -61,9 +64,10 @@ class Tips extends React.Component {
                   <div class="card">
                     <div class="card-image">
                       <img src={Back} />
-                      <a class="btn-floating halfway-fab waves-effect waves-light "><i class="material-icons">aspect_ratio</i></a>
+                      <a class="btn-floating halfway-fab waves-effect waves-light "><i class="material-icons">play_circle_filled</i></a>
                     </div>
-                    <div class="card-content primary-color-text">
+                    <div class="card-content primary-color-text card-backgroud">
+                    <span class="card-title">Card Title</span>
                       <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
                     </div>
                   </div>
@@ -75,9 +79,10 @@ class Tips extends React.Component {
                   <div class="card">
                     <div class="card-image">
                       <img src={Back} />
-                      <a class="btn-floating halfway-fab waves-effect waves-light "><i class="material-icons">aspect_ratio</i></a>
+                      <a class="btn-floating halfway-fab waves-effect waves-light "><i class="material-icons">play_circle_filled</i></a>
                     </div>
                     <div class="card-content primary-color-text">
+                    <span class="card-title">Card Title</span>
                       <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
                     </div>
                   </div>
@@ -88,11 +93,7 @@ class Tips extends React.Component {
               </div>
             </div>
 
-            {/* imagem svg do parte de baixo do main */}
-            <svg class="wave " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-              <path fill="#4a148c" fill-opacity="0.2" d="M0,160L60,154.7C120,149,240,139,360,165.3C480,192,600,256,720,266.7C840,277,960,235,1080,213.3C1200,192,1320,192,1380,192L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
-
-            </svg>
+            
           </section>
           {/*End: second content */}
         </div>
