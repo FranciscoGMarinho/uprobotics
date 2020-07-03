@@ -18,6 +18,7 @@ import Explore from '../pages/Explore';
 import Tips from '../pages/Tips';
 import Create from '../pages/Create';
 import About from '../pages/About';
+import Login from '../pages/Login';
 import $ from 'jquery';
 import { findDOMNode } from 'react-dom';
 
@@ -62,7 +63,10 @@ class Navbar extends React.Component {
                 <li><Link class="primary-color-text" to="/explore">Explorar</Link></li>
                 <li><Link class="primary-color-text" to="/about">Sobre Nós</Link></li>
                 {/* button entar e Registar */}
-                <li><a class=" btn btn-user "> <i class="material-icons right ">account_circle</i> Entrar</a></li>
+                <li><Link class="primary-color-text btn btn-user" to="/login" exact>Login
+                  <i class="material-icons right ">account_circle</i></Link>
+                </li>
+
                 <li><a class=" btn btn-user "> <i class="material-icons right ">account_circle</i> Registrar</a></li>
               </ul>
 
@@ -121,6 +125,7 @@ class Navbar extends React.Component {
           <Route path="/explore" component={Explore} />
           <Route path="/editor" component={Create} />
           <Route path="/tips" component={Tips} />
+          <Route path="/login" component={Login} />
         </Switch>
 
       </Router>

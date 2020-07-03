@@ -32,7 +32,7 @@ class Tips extends React.Component {
 
         {/* second content está em um container*/}
         <div class="primary-color-light-2">
-          <section className="section  valign-wrapper  container">
+          <section className="second-section  valign-wrapper  container">
 
             {/* 1ª linha */}
             <div className="row left-align ">

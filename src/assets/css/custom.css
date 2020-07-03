@@ -9,30 +9,28 @@
 
 /* Paleta de cores do site */
 :root {
-   
     --primary-color-light: #f9f9fa;
     /* #fff3e0; */
     --primary-color-light-2: #fdfdfd;
-    /* Azul escuro */
     --primary-color: #222A72;
-     /* Azul claro */
      --blue-color: #5867e7;
     /* roxo */
      /* #4a148c; */
-
-    /* laranja */
-    /* --primary-color: #fb8c00 */
   }
 
-
-/* fontes */
+/* --------------------
+        Fontes
+----------------------- */
 body{
      font-family: 'Ubuntu Condensed', sans-serif;
-
 }
 
 p{
     text-align: justify;
+}
+
+a{
+    color: var(--primary-color);;
 }
 
 body .title{
@@ -45,7 +43,9 @@ body .title{
 }
 
 
-/* cores do meu site */
+/* --------------------
+        Cores
+----------------------- */
 .primary-color{
     background-color: var(--primary-color);
 }
@@ -63,59 +63,46 @@ body .title{
 
 .primary-color-text{
     color: var(--primary-color);
-  
 }
 
-/* ocupando toda a tela */
+/* --------------------
+    Tamanho Tela
+----------------------- */
+
 .primary-section {
-    /* display: flex; */
     min-height: 90vh;
-    /* flex-direction: column; */
-
-   
+    justify-content: center;
+    align-items: center;
 }
 
-.imagem-backgroud{
-
-    background-image: url("../images/uprobotics/direita-azul.svg");
-    width: 100%;
-    background-size: 100%;
-    /* background-repeat: no-repeat; */
-}
-
-
-
-
-
-
-.section {
+.second-section {
     display: flex;
     min-height: 80vh;
     flex-direction: column;
 }
 
-/* buttom navBar */
-i.right {
-    margin-left: 0px;
-}
-.bold{
-    font-weight: bold;
-}
-/* color and font navBar */
-nav .brand-logo {
-    color: var(--primary-color);
-    font-size: 21px;
-    font-weight: bold;
+/* --------------------
+    Background
+----------------------- */
+
+/* background da página Home */
+.imagem-backgroud{
+    background-image: url("../images/uprobotics/direita-azul.svg");
+    width: 100%;
+    background-size: 100%;
 }
 
+/* background da página Login */
+.login-background{
+    background-image: url("../images/uprobotics/background-login.svg");
+    width: 100%;
+    background-size: 100%;
+}
 
-/* margem do tema */
-.tema {
-    margin-bottom: 100px
-} 
 
-
-/* buttons */
+/* --------------------
+    Buttons 
+----------------------- */
 .btn-play {
     /* border: 1px solid #e65100; */
     background-color: var(--primary-color);
@@ -124,8 +111,6 @@ nav .brand-logo {
     border-radius: 30px;
     font-size: 13px;
     font-weight: bold;
- 
-  
 }
 
 .btn-play:hover {
@@ -160,17 +145,14 @@ nav .brand-logo {
     transition:  0.5s;
 }
 
-
-
-
 /* icon do btn user */
 i.right {
     margin-left: 5px;
 }
 
-/************
- *  SIDNAV 
- ************/
+ /* --------------------
+    SIDNAV 
+----------------------- */
 .sidenav{
     background-color: var(--primary-color);
     /* border radius do sidbar */
@@ -192,28 +174,40 @@ i.right {
     left: 20%;
 }
 .center-icon{
-    /* text-align: -webkit-center;
-     */
-     
     justify-content: center;
 }
+
 /* alterando a largura */
 .sidenav {
     width: 200px;
 }
 
+/* opacidade do sidebar */
+.element.style {
+    display: block;
+    opacity: 0;
+}
 
-/************
- * NAVBAR 
- ************/
+ /* --------------------
+    NAVBAR 
+----------------------- */
 nav ul a {
     font-size: 17px;
 }
+/* color and font navBar */
+nav .brand-logo {
+    color: var(--primary-color);
+    font-size: 21px;
+    font-weight: bold;
+}
+/* buttom navBar */
+i.right {
+    margin-left: 0px;
+}
 
-/************
- * CARDS 
- ************/
-
+ /* --------------------
+    CARDS 
+----------------------- */
 .card {
     border-radius: 10px;
 }
@@ -229,22 +223,9 @@ nav ul a {
     color: var(--primary-color);
 }
 
-
-
-/* imagem back-groud da pagina main*/
-.wave{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
-.row {
-    z-index: 1;
-}
-
-/* breadcrumb */
-
+/* --------------------
+    Breadcrumb
+----------------------- */
 .breadcrumb-color{
     background-color: var( --primary-color-light-2);
     
@@ -256,16 +237,81 @@ nav ul a {
     color: var( --primary-color);
 }
 
+/* --------------------
+    Página de Login
+----------------------- */
+html,
+body {
+    height: 100%;
+}
 
-/* opacidade do sidebar */
-.element.style {
-    display: block;
-    opacity: 0;
+/* largura do card */
+#login-page {
+   width: 450px;
+}
+
+.card .card-login {
+     position: absolute;
+     left: 50%;
+     top: 50%;
+     -moz-transform: translate(-50%, -50%);
+     -webkit-transform: translate(-50%, -50%);
+     -ms-transform: translate(-50%, -50%);
+     -o-transform: translate(-50%, -50%);
+     transform: translate(-50%, -50%);
+}
+
+/* alterando a cor do tab */
+.tabs .tab a:hover, .tabs .tab a.active {
+    background-color: transparent;
+    color:  var( --primary-color);
+}
+
+.tabs .tab a {
+    color: var( --primary-color);
+}
+
+.tabs .indicator { 
+    background-color: var( --primary-color);   
+}
+
+.tabs .tab a:focus, .tabs .tab a:focus.active {
+    background-color: rgba(193, 178, 246, 0.2);
+    outline: none;
+}
+
+/* alterando cor padrão do checkbox */
+[type="checkbox"].filled-in:checked+span:not(.lever):after {
+    border: 2px solid var( --primary-color);  
+    background-color: var( --primary-color);  
+}
+
+.section-btn {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+/* margem do input */
+.input-field {
+    margin-bottom: 0rem; 
 }
 
 
-/* Estilos aplicados a larguras até 480 pixels */
+/* --------------------
+    Tamanho de Tela
+----------------------- */
+/* texto */
+@media only screen and (min-width: 960px){
+    .flow-text {
+        font-size: 18px;
+    }
+    
 
+}
+
+/* Estilos aplicados a larguras até 480 pixels */
 @media screen and (max-width: 480px) {
    
     .primary-section img{
@@ -285,6 +331,24 @@ nav ul a {
     }
 }
 
+
+/* --------------------
+    Customizações
+----------------------- */
+
+/* imagem back-groud da pagina Home*/
+.wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.row {
+    z-index: 1;
+    margin-bottom: 1px;
+}
+
 /* ajustes na largura do container */
 .container {
     margin: 0 auto;
@@ -292,36 +356,23 @@ nav ul a {
     width: 80%;
 }
 
-/* divider */
-
+/* margemdo divider */
 .divider{
-    
     margin: 2rem 0 2rem 0;
 }
-
 
 /* margem */
 h5 {
     margin: 2rem 0 2rem 0;
 }
 
-/* guia pratico */
-.card-explorer .card .card-content {
-    padding: 5px;
-    border-radius: 0 0 2px 2px;
-}
-.card-explorer .card .card-content .card-title {
-    margin-bottom: 1px;
-}
-.card-explorer .card .card-action {
-    border-top: none;
-    background-color: var( --blue-color);
+/* margem do tema */
+.tema {
+    margin-bottom: 100px
+} 
+
+.bold{
+    font-weight: bold;
 }
 
-/* texto */
-@media only screen and (min-width: 960px){
-    .flow-text {
-        font-size: 18px;
-    }
-    
-}
+

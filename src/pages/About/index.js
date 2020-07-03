@@ -20,7 +20,7 @@ class Create extends React.Component {
 
                 {/* content */}
                 <div class="primary-color-light-2">
-                    <section className="section  valign-wrapper  container">
+                    <section className="second-section  valign-wrapper  container">
 
                         {/* 1ª linha */}
                         <div className="row center-align ">

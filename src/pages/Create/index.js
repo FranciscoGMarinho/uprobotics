@@ -42,7 +42,7 @@ class Create extends React.Component {
 
         <div class="primary-color-light-2">
           {/* class"section" define a altura da página */}
-          <section className="section  valign-wrapper  container">
+          <section className="second-section  valign-wrapper  container">
 
             {/* title */}
             <div className="row center-align ">
