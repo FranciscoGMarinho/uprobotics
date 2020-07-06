@@ -6,7 +6,6 @@ import 'materialize-css';
 import { Button, Card, Row, Col } from 'react-materialize';
 import 'materialize-css';
 import '../../App.css';
-import '../../assets/css/custom.css';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
 import imagem from '../../assets/images/uprobotics/code-robo.svg';

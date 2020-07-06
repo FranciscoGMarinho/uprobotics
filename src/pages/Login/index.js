@@ -11,6 +11,11 @@ class Login extends React.Component {
         M.AutoInit();
     }
 
+    constructor(props) {
+        super(props);
+        this.state = {active: false};
+    }
+
     render() {
         return (
 
@@ -24,8 +29,8 @@ class Login extends React.Component {
 
                             <div class="col s12">
                                 <ul class="tabs ">
-                                    <li class="tab col s6"><a href="#test1">Cadastrar</a></li>
-                                    <li class="tab col s6"><a class="active" href="#test2">Entrar</a></li>
+                                    <li    class="tab col s6"><a  href="#test1">Cadastrar</a></li>
+                                    <li    class="tab col s6"><a class="active" href="#test2">Entrar</a></li>
                                 </ul>
                             </div>
                             <div class="container">
@@ -69,7 +74,7 @@ class Login extends React.Component {
                                             </div>
                                         </div>                                      
                                                 <div class="section-btn ">
-                                                    <button className="btn btn-play z-depth-2 medium  " type="submit">
+                                                    <button  class="btn btn-play z-depth-2 medium  " type="submit">
                                                         <a class="white-text">Cadastrar</a>
                                                     </button>
                                                 </div>

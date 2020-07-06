@@ -23,6 +23,12 @@ import $ from 'jquery';
 import { findDOMNode } from 'react-dom';
 
 
+import '../assets/css/custom.css';
+import '../assets/js/custom.js';
+
+
+
+
 class Navbar extends React.Component {
 
   // Inicializa automaticamente todas as coisas do Materialize que estou utilizando!
@@ -30,6 +36,29 @@ class Navbar extends React.Component {
     M.AutoInit();
   }
   //-->fim  
+
+  constructor(props) {
+    super(props);
+    this.state = { isHide: false };
+
+    this.handleClick = this.handleClick.bind(this);
+    this.handleClickHome = this.handleClickHome.bind(this);
+  }
+
+  // esconde os butões ao ir para a tela Criar 
+  handleClick() {
+    this.setState(state => ({
+      isHide: true
+    }));
+  }
+
+  // mostra 
+  handleClickHome() {
+    this.setState(state => ({
+      isHide: false
+    }));
+  }
+  // se o btn Criar for clicado então isHide = True.
 
   render() {
     return (
@@ -49,26 +78,34 @@ class Navbar extends React.Component {
         <div class="navbar-fixed">
           <nav className="z-depth-0 ">
             <div class="nav-wrapper white  ">
-              <Link to="/" class="marginleft ">
+              <Link onClick={this.handleClickHome} to="/" class="marginleft ">
                 <a className="brand-logo ">
-                  <i className="material-icons  "><Link class="primary-color-text" to="/" exact>extension</Link></i> Up Robotics
+                  <i className="material-icons  "><Link onClick={this.handleClickHome} class="primary-color-text" to="/" exact>extension</Link></i> Up Robotics
               </a>
               </Link>
 
               <ul id="nav-mobile" class="right hide-on-med-and-down ">
-                {/* buttons de navegação */}
-                <li><Link class="primary-color-text" to="/" exact>Home</Link></li>
-                <li><Link class="primary-color-text" to="/editor">Criar</Link></li>
-                <li><Link class="primary-color-text" to="/tips">Dicas</Link></li>
-                <li><Link class="primary-color-text" to="/explore">Explorar</Link></li>
-                <li><Link class="primary-color-text" to="/about">Sobre Nós</Link></li>
-                {/* button entar e Registar */}
-                <li><Link class="primary-color-text btn btn-user" to="/login" exact>Login
-                  <i class="material-icons right ">account_circle</i></Link>
-                </li>
 
-                <li><a class=" btn btn-user "> <i class="material-icons right ">account_circle</i> Registrar</a></li>
+                <div style={{ display: this.state.isHide ? 'none' : 'block' }}> {/*função para esconder os botões na tela Criar*/}
+                  {/* buttons de navegação */}
+                  <li><Link class="primary-color-text" to="/" exact>Home</Link></li>
+                  <li><Link onClick={this.handleClick} class="primary-color-text" to="/editor">  Criar</Link></li>
+                  <li><Link class="primary-color-text" to="/tips">Dicas</Link></li>
+                  <li><Link class="primary-color-text" to="/explore">Explorar</Link></li>
+                  <li><Link class="primary-color-text" to="/about">Sobre Nós</Link></li>
+                  
+                  {/* button entar e Registar */}
+                  <li><Link class="primary-color-text btn btn-user" to="/login" exact>Login
+                    <i class="material-icons right ">account_circle</i></Link>
+                  </li>
+                  <li><Link class="primary-color-text btn btn-user" to="/login" exact>Registrar
+                    <i class="material-icons right ">account_circle</i></Link>
+                  </li>
+                </div>
+
+
               </ul>
+
 
               {/* menu sidnav invisivel para telas grandes  "hide-on-large-only"  */}
               <a href="#" data-target="slide-out" class="sidenav-trigger  primary-color-text">
