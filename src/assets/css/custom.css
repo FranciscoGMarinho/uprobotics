@@ -11,11 +11,11 @@
 :root {
     --primary-color-light: #f9f9fa;
     /* #fff3e0; */
-    --primary-color-light-2: #fdfdfd;
-    --primary-color: #222A72;
+    --primary-color-light-2: #f8f7fc;
+    --primary-color:  #3D0B7A;
      --blue-color: #5867e7;
     /* roxo */
-     /* #4a148c; */
+     /* #222A72 */
   }
 
 /* --------------------
@@ -23,7 +23,16 @@
 ----------------------- */
 body{
      font-family: 'Ubuntu Condensed', sans-serif;
+     
+    
 }
+
+/* tela criar */
+/* tamanho mínimo de tela */
+/* .container-create{
+
+ min-width: 700px;
+} */
 
 p{
     text-align: justify;
@@ -80,6 +89,12 @@ body .title{
     min-height: 80vh;
     flex-direction: column;
 }
+.section-create{
+    display: flex;
+    min-height: 90vh;
+    flex-direction: column;
+
+}
 
 /* --------------------
     Background
@@ -87,38 +102,30 @@ body .title{
 
 /* background da página Home */
 .imagem-backgroud{
-    background-image: url("../images/uprobotics/direita-azul.svg");
+    background-image: url("../images/uprobotics/background-home.svg");
     width: 100%;
     background-size: 100%;
 }
-
-/* background da página Login */
-.login-background{
-    background-image: url("../images/uprobotics/background-login.svg");
-    width: 100%;
-    background-size: 100%;
-}
-
 
 /* --------------------
     Buttons 
 ----------------------- */
-.btn-play {
-    /* border: 1px solid #e65100; */
-    background-color: var(--primary-color);
+.btn-play{
+    background-color:var(--primary-color);
     color: white;
-    line-height: 0px;
     border-radius: 30px;
-    font-size: 13px;
+    padding: 0 10px;
     font-weight: bold;
+    font-size: 12px;
+   
+}
+.btn-play:hover {
+    background-color: #28084e;
+    color: white;
+    transition:  0.5s;
+
 }
 
-.btn-play:hover {
-    background-color: var(--primary-color);
-    font-size: 11px;
-    transition:  0.2s;
-    
-}
 
 .btn-user{
     background-color:white;
@@ -194,11 +201,25 @@ i.right {
 nav ul a {
     font-size: 17px;
 }
+
+.hover-0 a:hover {
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
 /* color and font navBar */
 nav .brand-logo {
     color: var(--primary-color);
     font-size: 21px;
     font-weight: bold;
+}
+
+.nav-wrapper  img {
+    height: 64px;
+    padding: 12px;
+}
+
+.color{
+    color: #fff;
 }
 /* buttom navBar */
 i.right {
@@ -236,68 +257,6 @@ i.right {
 .breadcrumb:before {
     color: var( --primary-color);
 }
-
-/* --------------------
-    Página de Login
------------------------ */
-html,
-body {
-    height: 100%;
-}
-
-/* largura do card */
-#login-page {
-   width: 450px;
-}
-
-.card .card-login {
-     position: absolute;
-     left: 50%;
-     top: 50%;
-     -moz-transform: translate(-50%, -50%);
-     -webkit-transform: translate(-50%, -50%);
-     -ms-transform: translate(-50%, -50%);
-     -o-transform: translate(-50%, -50%);
-     transform: translate(-50%, -50%);
-}
-
-/* alterando a cor do tab */
-.tabs .tab a:hover, .tabs .tab a.active {
-    background-color: transparent;
-    color:  var( --primary-color);
-}
-
-.tabs .tab a {
-    color: var( --primary-color);
-}
-
-.tabs .indicator { 
-    background-color: var( --primary-color);   
-}
-
-.tabs .tab a:focus, .tabs .tab a:focus.active {
-    background-color: rgba(193, 178, 246, 0.2);
-    outline: none;
-}
-
-/* alterando cor padrão do checkbox */
-[type="checkbox"].filled-in:checked+span:not(.lever):after {
-    border: 2px solid var( --primary-color);  
-    background-color: var( --primary-color);  
-}
-
-.section-btn {
-    display: flex;
-    flex-direction: column;
-    padding-top: 2rem;
-    padding-bottom: 3rem;
-}
-
-/* margem do input */
-.input-field {
-    margin-bottom: 0rem; 
-}
-
 
 /* --------------------
     Tamanho de Tela
@@ -374,5 +333,6 @@ h5 {
 .bold{
     font-weight: bold;
 }
+
 
 

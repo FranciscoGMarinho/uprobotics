@@ -1,116 +1,129 @@
 import React from 'react';
-import { Component, Fragment } from 'react';
-import M from 'materialize-css';
-import '../../App.css';
+import 'materialize-css';
+import M from 'materialize-css'
+import LoginContainer from '../../containers/LoginContainer'
+import './Styles/index.css';
+import { Link } from "react-router-dom";
+
 
 
 class Login extends React.Component {
 
     componentDidMount() {
-        // Auto initialize all the things!
+        //inicia o materializeCSS
         M.AutoInit();
     }
 
     constructor(props) {
         super(props);
-        this.state = {active: false};
+        this.state = {
+            sigin: props.signin,
+            sigup: props.signup
+
+        }
     }
 
     render() {
         return (
+            <>
+                <LoginContainer>
 
-            <Fragment>
-                <section className=" primary-section primary-color-light valign-wrapper  login-background">
-                    <div id="login-page" class="row">
-                        <div class="col s12 z-depth-0 card-panel card-login">
-                            <div class="section">
-                                <h4 class="title primary-color-text  center-align">Bem Vindo ao <br />UpRobotcs</h4>
+                    <section className=" section-login primary-color-light  login-background">
+
+
+
+                        <div className="row size white">
+                            {/* título */}
+                            <div className="">
+                                <Link to="/"> <h5 className="title primary-color-text  center-align">Bem Vindo ao <br />UpRobotcs</h5> </Link>
                             </div>
-
-                            <div class="col s12">
-                                <ul class="tabs ">
-                                    <li    class="tab col s6"><a  href="#test1">Cadastrar</a></li>
-                                    <li    class="tab col s6"><a class="active" href="#test2">Entrar</a></li>
+                            {/* tab */}
+                            <div className="col s12">
+                                <ul id="tabs-swipe-demo" className="tabs">
+                                    <li className="tab col s6"><a className={this.state.sigup} href="#test-swipe-1">Registrar</a></li>
+                                    <li className="tab col s6"><a className={this.state.sigin} href="#test-swipe-2">Entrar</a></li>
                                 </ul>
                             </div>
-                            <div class="container">
 
-                                {/* Cadastrar */}
-                                <div id="test1" class="col s12">
-                                    <form class="login-form">
-                                        <div class="row">
-                                            <div class="input-field col s6">
-                                                <input  id="first_name" type="text" class="validate" />
-                                                <label for="first_name">First Name</label>
-                                            </div>
-                                            <div class="input-field col s6">
-                                                <input id="last_name" type="text" class="validate" />
-                                                <label for="last_name">Last Name</label>
+                            {/* Registrar */}
+                            <div className="container">
+                                <div id="test-swipe-1" className="col s12">
+                                    <form className="login-form">
+                                        <div className="row">
+                                            <div className="input-field col s12">
+                                                <input id="first_name" type="text" className="validate" />
+                                                <label for="first_name">Nome de usuário</label>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="input-field col s12">
-                                                <input id="password" type="password" class="validate" />
-                                                <label for="password">Password</label>
+                                        <div className="row">
+                                            <div className="input-field col s12">
+                                                <input id="password" type="password" className="validate" />
+                                                <label for="password">Senha</label>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="input-field col s12">
-                                                <input id="email" type="email" class="validate" />
+                                        <div className="row">
+                                            <div className="input-field col s12">
+                                                <input id="password2" type="password" className="validate" />
+                                                <label for="password2">Confirmar Senha</label>
+                                            </div>
+                                        </div>
+
+                                        <div className="section-btn ">
+                                            <button className="btn btn-play z-depth-2 medium  " type="submit">
+                                                <a className="white-text">Registrar</a>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            {/* Fim: Cadastrar */}
+
+                            {/* Entrar */}
+                            <div className="container">
+                                <div id="test-swipe-2" className="col s12 white">
+                                    <form className="login-form">
+                                        <div className="row">
+                                            <div className="input-field col s12">
+                                                <input id="email" type="email" className="validate" />
                                                 <label for="email">Email</label>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class=" col s6">
+                                        <div className="row">
+                                            <div className="input-field col s12">
+                                                <input id="password" type="password" className="validate" />
+                                                <label for="password">Password</label>
+                                            </div>
+                                        </div>
+                                        <div className="row">
+                                            <div className=" col s6">
                                                 <p>
                                                     <label>
-                                                        <input type="checkbox" class="filled-in" checked="checked" />
+                                                    <input type="checkbox" className="filled-in" checked="checked"  />
                                                         <span>Relembrar</span>
                                                     </label>
                                                 </p>
                                             </div>
-                                            <div class=" col s6 ">
-                                                <p class="right-align"><a href="#" >Esqueceu a senha?</a></p>
-                                            </div>
-                                        </div>                                      
-                                                <div class="section-btn ">
-                                                    <button  class="btn btn-play z-depth-2 medium  " type="submit">
-                                                        <a class="white-text">Cadastrar</a>
-                                                    </button>
-                                                </div>
-                                    </form>
-                                </div>
-                                {/*FIM: Cadastrar */}
-
-                                {/* Entrar */}
-                                <div id="test2" class="col s12">
-                                    <form class="login-form">
-                                        <div class="row">
-                                            <div class="input-field col s12">
-                                                <input id="email" type="email" class="validate" />
-                                                <label for="email">Email</label>
+                                            <div className=" col s6 ">
+                                                <p className="right-align"><a href="#" >Esqueceu a senha?</a></p>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="input-field col s12">
-                                                <input id="password" type="password" class="validate" />
-                                                <label for="password">Password</label>
-                                            </div>
-                                        </div>
-                                        <div class="section-btn ">
+                                        <div className="section-btn ">
                                             <button className="btn btn-play z-depth-2 medium  " type="submit">
-                                                <a class="white-text">Entrar</a>
+                                                <a className="white-text">Entrar</a>
                                             </button>
                                         </div>
 
                                     </form>
                                 </div>
-                                 {/*FIM: Entrar */}
                             </div>
+                            {/* Fim: Entrar */}
+
                         </div>
-                    </div>
-                </section>
-            </Fragment >
+
+                    </section>
+
+                </LoginContainer>
+            </>
         );
     }
 }

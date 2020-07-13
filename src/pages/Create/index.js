@@ -1,19 +1,13 @@
-import React from 'react';
-import { Component, Fragment } from 'react';
-import styles from '../../assets/css/robotics.css';
-import color from '../../assets/css/colors.css';
-import apresentacao from "../../assets/images/slide.png"
-import 'materialize-css';
-import { Button, Card, Row, Col } from 'react-materialize';
-
-import BlocklyComponent, { Block, Value, Field, Shadow } from '../../Blockly';
-import 'materialize-css';
-import BlocklyJS from 'blockly/javascript';
+import React from 'react'
+import BlocklyComponent, { Block, Value, Field, Shadow } from '../../Blockly'
+import CreateContainer from '../../containers/CreateContainer'
+import BlocklyJS from 'blockly/javascript'
+import 'materialize-css'
+import '../../blocks/customblocks'
+import '../../generator/generator'
+import '../../assets/css/custom.css'
 
 
-import '../../blocks/customblocks';
-import '../../generator/generator';
-import '../../App.css';
 
 class Create extends React.Component {
 
@@ -21,6 +15,8 @@ class Create extends React.Component {
     super(props);
     this.simpleWorkspace = React.createRef();
   }
+
+ 
 
   generateCode = () => {
     var code = BlocklyJS.workspaceToCode(this.simpleWorkspace.workspace);
@@ -30,34 +26,17 @@ class Create extends React.Component {
   render() {
     return (
 
-      <Fragment>
-        <nav class="breadcrumb-color">
-          <div class="nav-wrapper  container ">
-            <div class="col s12">
-              <a href="#!" class="breadcrumb">Home</a>
-              <a href="#!" class="breadcrumb">Explorar</a>
-            </div>
-          </div>
-        </nav>
-
-        <div class="primary-color-light-2">
-          {/* class"section" define a altura da página */}
-          <section className="second-section  valign-wrapper  container">
-
-            {/* title */}
-            <div className="row center-align ">
-              <div className="col s12 ">
-                texto
-              </div>
-            </div>
-            {/* fim: Title */}
-          </section>
-        </div>
+      <>
+        <CreateContainer>
 
 
-        {/* tela de código */}
-        <div class="row ">
-          <div class="col s12 red">
+
+
+          {/* tela de código */}
+          {/* <div className="row "> */}
+          {/* <div className="col s12 red"> */}
+
+          <div className="section-create">
 
             <BlocklyComponent ref={this.simpleWorkspace}
               readOnly={false} trashcan={true} media={'media/'}
@@ -97,22 +76,19 @@ class Create extends React.Component {
                 </Value>
               </Block>
             </BlocklyComponent>
+            {/* </div> */}
+            {/* </div> */}
+            {/* Fim: tela de codigo */}
+            {/* </div> */}
           </div>
-        </div>
-        {/* Fim: tela de codigo */}
 
+         
 
-      </Fragment>
+        </CreateContainer>
+      </>
     );
   }
 }
-
-
-
-
-
-
-
 
 export default Create;
 

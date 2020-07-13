@@ -1,0 +1,82 @@
+
+
+.section-login {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center; 
+    min-width: 300px;
+}
+
+.login-background{
+    background-image: url("../../../assets/images/uprobotics/background-login.svg");
+    width: 100%;
+    background-size: 100%;
+}
+
+/* alterando a cor do tab */
+.tabs .tab a:hover, .tabs .tab a.active {
+    background-color: transparent;
+    color:  var( --primary-color);
+}
+
+.tabs .tab a {
+    color: var( --primary-color);
+}
+
+.tabs .indicator { 
+    background-color: var( --primary-color);   
+}
+
+.tabs .tab a:focus, .tabs .tab a:focus.active {
+    background-color: rgba(193, 178, 246, 0.2);
+    outline: none;
+}
+
+/* alterando cor padrão do checkbox */
+[type="checkbox"].filled-in:checked+span:not(.lever):after {
+    border: 2px solid var( --primary-color);  
+    background-color: var( --primary-color);  
+}
+
+/* tamanho do btn */
+.section-btn {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+/* margem do input */
+.input-field {
+    margin-bottom: 0rem; 
+}
+
+
+/* tamanho do row */
+.size{  
+    width: 35%; 
+    border-radius: 5px;
+    min-width: 300px;
+}
+
+/* abaixo de 500 */
+@media screen and (max-width: 500px) {
+
+    /* tamanho do row */
+.size{  
+
+    width: 300px; 
+    border-radius: 5px;
+}
+}
+
+/* acima de 500 */
+@media screen and (min-width: 500px) {
+
+    /* tamanho do row */
+.size{  
+    width: 400px;
+    border-radius: 5px;
+}
+}
