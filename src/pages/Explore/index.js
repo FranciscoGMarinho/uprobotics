@@ -35,7 +35,7 @@ export default function Explore() {
 
                                 <h5 className='header primary-color-text title '> 1. Veja um guia prático</h5>
                                 <div className="row">
-                                    <div className="col s12 m7 l7 ">
+                                    <div className="col s12 m7 l7">
                                         <span className="flow-text">
                                             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
@@ -43,12 +43,14 @@ export default function Explore() {
                                             specimen book.
                                     </span>
                                     </div>
-                                    <div classNameName="col s12 m5 l5 ">
-                                        {/* video */}
-                                        <div className="video-container">
-                                            <iframe width="853" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder="0" allowfullscreen></iframe>
-                                        </div>
-                                        {/* FIM: video */}
+
+                                    <div className="col s12 m5 l5 ">
+                                   
+                                    {/* video */}
+                                    <div class="video-container">
+                                        <iframe width="853" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder="0" allowfullscreen></iframe>
+                                    </div>
+                                    {/* FIM: video */}
                                     </div>
                                 </div>
 
@@ -72,7 +74,7 @@ export default function Explore() {
                                     <div className="col s12 m6 l4 ">
                                         <div className="card">
                                             <div className="card-image">
-                                                <img src={Back} alt="img1"/>
+                                                <img src={Back} alt="img1" />
                                                 <a className="btn-floating halfway-fab waves-effect waves-light red"><i className="material-icons">play_circle_filled</i></a>
                                             </div>
                                             <div className="card-content primary-color-text  card-backgroud ">
@@ -87,7 +89,7 @@ export default function Explore() {
                                     <div className="col s12 m6 l4  ">
                                         <div className="card">
                                             <div className="card-image">
-                                                <img src={Back}  alt="img2"/>
+                                                <img src={Back} alt="img2" />
                                                 <a className="btn-floating halfway-fab waves-effect waves-light "><i className="material-icons">play_circle_filled</i></a>
                                             </div>
                                             <div className="card-content primary-color-text card-backgroud">
@@ -102,7 +104,7 @@ export default function Explore() {
                                     <div className="col s12 m6 l4 ">
                                         <div className="card">
                                             <div className="card-image">
-                                                <img src={Back}  alt="img3"/>
+                                                <img src={Back} alt="img3" />
                                                 <a className="btn-floating halfway-fab waves-effect waves-light "><i className="material-icons">play_circle_filled</i></a>
                                             </div>
                                             <div className="card-content primary-color-text">
