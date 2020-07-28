@@ -1,0 +1,376 @@
+
+/* title */
+@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic&display=swap');
+/* corpo */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap'); 
+/* button */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@700&display=swap');
+
+
+/* Paleta de cores do site */
+:root {
+    --primary-color-light: #f9f9fa;
+    /* #fff3e0; */
+    --primary-color-light-2: #f8f7fc;
+    --primary-color:  #3D0B7A;
+     --blue-color: #5867e7;
+    /* roxo */
+     /* #222A72 */
+  }
+
+/* --------------------
+        Fontes
+----------------------- */
+body{
+     font-family: 'Ubuntu Condensed', sans-serif;
+     
+    
+}
+
+/* tela criar */
+/* tamanho mínimo de tela */
+/* .container-create{
+
+ min-width: 700px;
+} */
+
+p{
+    text-align: justify;
+}
+
+a{
+    color: var(--primary-color);;
+}
+
+body .title{
+    font-family: 'Carrois Gothic', sans-serif;
+    font-weight: bold; 
+}
+
+.btn{
+    font-family: 'karla', sans-serif; 
+}
+
+
+/* --------------------
+        Cores
+----------------------- */
+.primary-color{
+    background-color: var(--primary-color);
+}
+
+.primary-color-light{
+    background-color: var(--primary-color-light);
+}
+
+.primary-color-light-2{
+    background-color: var(--primary-color-light-2);
+}
+.primary-color-text-light-2{
+    color: var(--primary-color-light-2);
+}
+
+.primary-color-text{
+    color: var(--primary-color);
+}
+
+/* --------------------
+    Tamanho Tela
+----------------------- */
+
+.primary-section {
+    min-height: 90vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.second-section {
+    display: flex; 
+    min-height: 60vh;
+    flex-direction: column;
+}
+.section-create{
+    display: flex;
+    min-height: 90vh;
+    flex-direction: column;
+
+}
+
+/* --------------------
+    Background
+----------------------- */
+
+/* background da página Home */
+.imagem-backgroud{
+    background-image: url("../images/uprobotics/background-home.svg");
+    width: 100%;
+    background-size: 100%;
+}
+
+/* --------------------
+    Buttons 
+----------------------- */
+.btn-play{
+    background-color:var(--primary-color);
+    color: white;
+    border-radius: 30px;
+    padding: 0 10px;
+    font-weight: bold;
+    font-size: 12px;
+   
+}
+.btn-play:hover {
+    background-color: #28084e;
+    color: white;
+    transition:  0.5s;
+
+}
+
+
+.btn-user{
+    background-color:white;
+    color: var(--primary-color);;
+    border-radius: 30px;
+    padding: 0 10px;
+    font-weight: bold;
+    font-size: 12px;
+   
+}
+.btn-user:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transition:  0.5s;
+}
+
+.btn-floating i {
+    background-color: var(--primary-color);;
+    color: white;
+}
+.btn-floating i:hover {
+    background-color:  white; 
+    color: var(--primary-color);
+    transition:  0.5s;
+}
+
+/* icon do btn user */
+i.right {
+    margin-left: 5px;
+}
+
+ /* --------------------
+    SIDNAV 
+----------------------- */
+.sidenav{
+    background-color: var(--primary-color);
+    /* border radius do sidbar */
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.sidenav li>a {
+    font-size: 16px;
+}  
+/* user view */
+.user-view{
+    min-height: 30vh;
+ 
+}
+
+/* centralizando icon */
+.user-view a{
+    color: white;
+    left: 20%;
+}
+.center-icon{
+    justify-content: center;
+}
+
+/* alterando a largura */
+.sidenav {
+    width: 200px;
+}
+
+/* opacidade do sidebar */
+.element.style {
+    display: block;
+    opacity: 0;
+}
+
+ /* --------------------
+    NAVBAR 
+----------------------- */
+nav ul a {
+    font-size: 17px;
+}
+
+.hover-0 a:hover {
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+/* color and font navBar */
+nav .brand-logo {
+    color: var(--primary-color);
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.nav-wrapper  img {
+    height: 64px;
+    padding: 12px;
+}
+
+.color{
+    color: #fff;
+}
+/* buttom navBar */
+i.right {
+    margin-left: 0px;
+}
+
+ /* --------------------
+    CARDS 
+----------------------- */
+.card {
+    border-radius: 10px;
+}
+
+.card .card-image img {
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 10px solid white;
+}
+
+.card .card-image .card-title {
+    color: var(--primary-color);
+}
+
+/* --------------------
+    Breadcrumb
+----------------------- */
+.breadcrumb-color{
+    background-color: var( --primary-color-light-2);
+    
+}
+.breadcrumb-color .breadcrumb{
+    color: var( --primary-color);
+}
+.breadcrumb:before {
+    color: var( --primary-color);
+}
+
+/* --------------------
+    Tamanho de Tela
+----------------------- */
+/* texto */
+@media only screen and (min-width: 960px){
+    .flow-text {
+        font-size: 18px;
+    }
+    
+
+}
+
+/* Estilos aplicados a larguras até 480 pixels */
+@media screen and (max-width: 480px) {
+   
+    .primary-section img{
+        display: none !important;
+        position:absolute;
+
+    }
+    .primary-section div{
+        text-align: center;
+    }
+
+    .imagem-backgroud{
+
+        background-image: url("../images/uprobotics/backgroud-mobile.svg");
+        width: 100%;
+        background-size: 100%;
+    }
+}
+
+
+/* --------------------
+    Customizações
+----------------------- */
+
+/* imagem back-groud da pagina Home*/
+.wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.row {
+    z-index: 1;
+    margin-bottom: 1px;
+}
+
+/* ajustes na largura do container */
+.container {
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 80%;
+}
+
+/* margemdo divider */
+.divider{
+    margin: 2rem 0 2rem 0;
+}
+
+/* margem */
+h5 {
+    margin: 2rem 0 2rem 0;
+}
+
+/* margem do tema */
+.tema {
+    margin-bottom: 100px
+} 
+
+.bold{
+    font-weight: bold;
+}
+
+
+
+.red{
+    background-color: brown;
+}
+
+
+/* custom da area de codigo */
+.codeDiv{
+
+    font-family: 'Courier New', Courier, monospace; 
+    float:left; 
+   
+    background-color: #263238;           
+    color: #ffffff; 
+    border-style: solid;
+    border-color: #E5E7E9;
+    padding-top: 3%;
+    padding-left: 5%;
+    min-height: 90vh;
+     height: 500px; 
+     width: 100%; 
+/* 
+    height: 90%;
+  width: 20%;
+  position: absolute; */
+
+}
+
+
+/* custom link do navbar */
+/* nav ul a{
+    background-color: aquamarine;
+  
+  
+} */
+/* 
+.logo{
+      line-height: 0px;
+} */
