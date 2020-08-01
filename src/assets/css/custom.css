@@ -85,8 +85,8 @@ body .title{
 }
 
 .second-section {
-    display: flex; 
-    min-height: 60vh;
+    display: flex;
+    min-height: 80vh;
     flex-direction: column;
 }
 .section-create{

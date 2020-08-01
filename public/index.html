@@ -28,15 +28,49 @@
   <body>
     <noscript>Você precisa habilitar o JavaScript para executar este aplicativo.</noscript>
     <div id="root"></div>
-  <!--
-    Este arquivo HTML é um modelo.
-    Se você o abrir diretamente no navegador, verá uma página vazia.
+ 
 
-    Você pode adicionar páginas da web, metatags ou análises a esse arquivo.
-    A etapa de construção colocará os scripts incluídos na tag <body>.
+ <script>
+    var vrau = "nothing here";
+        var workspace = Blockly.inject('blocklyDiv', {
+            toolbox: document.getElementById('toolbox')
+        });
 
-    Para iniciar o desenvolvimento, execute `npm start` ou` yarn start`.
-    Para criar um pacote de produção, use `npm run build` ou` yarn build`.
-    -->
+        function update(event) {
+            Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
+            var code = new String(Blockly.JavaScript.workspaceToCode(workspace));
+            if (code != "") {
+                vrau = code;
+                document.getElementById("teste").innerHTML = vrau;
+                cleanThanUp()
+            }
+        }
+
+        function cleanThanUp() {
+            var list = document.getElementById("im");
+            while (list.hasChildNodes()) {
+                list.removeChild(list.childNodes[0]);
+            }
+            updateGraph();
+        }
+
+        function updateGraph() {
+            if (vrau != "nothing here") {
+                var viz = new Viz();
+                viz.renderSVGElement(vrau)
+                    .then(function(element) {
+                        document.getElementById("im").appendChild(element);
+                    })
+                    .catch(error => {
+                        // Create a new Viz instance (@see Caveats page for more info)
+                        viz = new Viz();
+
+                        // Possibly display the error
+                        console.error(error);
+                    });
+            }
+        }
+        workspace.addChangeListener(update);
+ </script>
   </body>
 </html>

@@ -18,12 +18,11 @@ class Navbar extends React.Component {
       <>
         {/* NAVBAR */}
         <div className="navbar-fixed">
-          <nav classNameName="z-depth-0 ">
+          <nav className=" z-depth-0 ">
             <div className="nav-wrapper white  ">
               {/* logo */}
               <Link to="/" className="marginleft ">
-                {/* <div> </div> */}
-                <a classNameName="brand-logo "><Link to="/"  ><img src={logo} alt="UpRobotics" /> </Link></a>
+                <a className="brand-logo "><Link to="/"  ><img src={logo} alt="UpRobotics" /> </Link></a>
               </Link>
 
               <ul id="nav-mobile" className="right hide-on-med-and-down ">

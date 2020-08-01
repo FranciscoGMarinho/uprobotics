@@ -12,6 +12,7 @@ class Login extends React.Component {
     componentDidMount() {
         //inicia o materializeCSS
         M.AutoInit();
+  
     }
 
     constructor(props) {
@@ -35,7 +36,7 @@ class Login extends React.Component {
                         <div className="row size white">
                             {/* título */}
                             <div className="">
-                                <Link to="/"> <h5 className="title primary-color-text  center-align">Bem Vindo ao <br />UpRobotcs</h5> </Link>
+                                <Link to="/" > <h5 className="title primary-color-text  center-align">Bem Vindo ao <br />UpRobotics</h5> </Link>
                             </div>
                             {/* tab */}
                             <div className="col s12">
