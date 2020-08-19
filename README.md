@@ -30,7 +30,7 @@ npm run start
 ```
 
 ### Demo
-![](https://github.com/FranciscoGMarinho/uproboticsbasic/blob/master/demostracaoUpRobotics.gif)
+![](https://github.com/FranciscoGMarinho/uprobotics/blob/master/demostracaoUpRobotics2.gif)
 
 ### :pencil: Algumas tecnologias utilizadas
 
