@@ -79,7 +79,7 @@ Blockly.Blocks['teste'] = {
     this.appendStatementInput("NAME")
         .setCheck(null)
         .appendField("teste marrom");
-    this.setColour(20);
+    this.setColour(21);
  this.setTooltip("");
  this.setHelpUrl("");
   }
