@@ -46,6 +46,7 @@ class Create extends React.Component {
                     <block type="controls_ifelse" x="0" y="0"></block>
                   </xml>
                 `}>
+
                   <Category name="BLOCO 1" colour="120">
                     <Block type="controls_repeat_ext">
                       <Value name="TIMES">
@@ -55,27 +56,43 @@ class Create extends React.Component {
                       </Value>
                     </Block>
                   </Category>
+
+                  
                   <Category name="BLOCO 2" colour="120">
-                    <Block type="controls_repeat_ext">
-                      <Value name="TIMES">
-                        <Shadow type="math_number">
-                          <Field name="NUM">10</Field>
-                        </Shadow>
-                      </Value>
-                    </Block>
-                  </Category>
-                  <Category name="BLOCO 3" colour="120">
                     <Block type="test_react_field" />
                     <Block type="teste" />
                     <Block type="logic_compare" />
                     <Block type="logic_operation" />
+                  </Category>
+
+
+
+                  
+                  <Category name="Movimentos" colour="270">
+                    <Block type="init_arm"> </Block>
+                    <Block type="garra_fechar_pos"> </Block>
+                    <Block type="garra_abrir_pos"> </Block>
+                    <Block type="girar_esquerda"> </Block>
+                    <Block type="girar_direita"> </Block>
+                    <Block type="altura_pos"> </Block>
+                    <Block type="angulo_pos"> </Block>
+                  </Category>
+                  <Category name="Funções" colour="195">
+                    <Block type="import_controls"></Block>
+                    <Block type="import_functions"></Block>
+                  </Category>
+                  <Category name="Controle" colour="300">
+                    <Block type="metodo_loop"></Block>
+                  </Category>
+                  <Category name="Arduino" colour="160">
+                    <Block type="definir_portas"></Block>
                   </Category>
                 </BlocklyComponent>
               </div>
             </div>
             <div className="col s12 m4 l4    blue">
               <div className="codeDiv" id="code">
-                falta arrumar a logo
+                Aqui é a DIV onde o código gerado deve aparecer
               </div>
             </div>
           </div>
