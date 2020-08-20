@@ -37,6 +37,9 @@ class BlocklyComponent extends React.Component {
         this.toolbox = React.createRef();
     }
 
+    // add essa nova linha para o codigo aparecer 
+    shouldComponentUpdate() {return false}
+
     componentDidMount() {
         const { initialXml, children, ...rest } = this.props;
         this.primaryWorkspace = Blockly.inject(

@@ -2,6 +2,7 @@ import React from 'react'
 import BlocklyComponent, { Category, Block, Value, Field, Shadow } from '../../Blockly'
 import CreateContainer from '../../containers/CreateContainer'
 import BlocklyJS from 'blockly/javascript'
+// import BlocklyJS from '../../blocks/customblocks'
 import 'materialize-css'
 import '../../blocks/customblocks'
 import '../../generator/generator'
@@ -11,16 +12,17 @@ import '../../assets/css/custom.css'
 
 class Create extends React.Component {
 
-
   constructor(props) {
     super(props);
     this.simpleWorkspace = React.createRef();
-  }
 
+    this.state = {code: ""};
+  }
 
   generateCode = () => {
     var code = BlocklyJS.workspaceToCode(this.simpleWorkspace.workspace);
     console.log(code);
+    this.setState({code: code});
   }
 
   render() {
@@ -92,7 +94,11 @@ class Create extends React.Component {
             </div>
             <div className="col s12 m4 l4    blue">
               <div className="codeDiv" id="code">
-                Aqui é a DIV onde o código gerado deve aparecer
+                {/* button */}
+                <button onClick={this.generateCode}>Convert</button>
+                <br/>
+                {/* code aqui */}
+                {this.state.code}
               </div>
             </div>
           </div>
