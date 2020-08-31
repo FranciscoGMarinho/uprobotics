@@ -1,0 +1,74 @@
+
+
+.area{
+    min-height: 82vh;
+}
+
+/* custom da area de codigo */
+.gera-code{
+
+    font-family: 'Courier New', Courier, monospace; 
+    float:left; 
+   
+    background-color: #263238;           
+    color: #ffffff; 
+    /* border-style: solid;
+    border-color: #E5E7E9; */
+    padding-top: 3%;
+    padding-left: 5%;
+    min-height: 82vh;
+     /* height: 8px;  */
+     width: 100%; 
+     /* position: absolute;
+     bottom: 0; */
+/* 
+    height: 90%;
+  width: 20%;
+  position: absolute; */
+
+}
+
+
+.menu-lower-primary{
+    height: 60px;
+    background-color: var( --primary-color-light);
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.menu-lower-secondary{
+    height: 60px;
+    background-color: var( --primary-color-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#block-code .col{
+    padding: 0;
+}
+
+.btn-code{
+    margin: 5px;
+}
+
+
+
+.section-create{
+    display: flex;
+    min-height: 82vh;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+@media only screen and (min-width: 601px){
+    .menu-lower-secondary{
+        height: 60px;
+        background-color: var( --primary-color-light);
+        display: flex;
+        align-items: center;
+        justify-content: right;
+    }
+  }
+  

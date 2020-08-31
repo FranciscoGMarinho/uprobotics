@@ -1,6 +1,19 @@
 #blocklyDiv {
-  height: 90%;
-  width: 60%;
+  height: 82.2vh; 
+  width: 100%;
   position: absolute;
-  bottom: 0;
+  /* bottom: 0; */
+  /* min-width: 300px; */
+  /* border-style: solid;
+    border-color: #E5E7E9; */
+}
+
+
+@media only screen and (min-width: 601px){
+  #blocklyDiv {
+    height: 82.2vh;
+    width: 66.6666666667%;
+    position: absolute;
+    /* bottom: 0; */
+  }
 }

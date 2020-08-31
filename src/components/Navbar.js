@@ -22,7 +22,7 @@ class Navbar extends React.Component {
             <div className="nav-wrapper white  ">
               {/* logo */}
               <Link to="/" className="marginleft ">
-                <a className="brand-logo "><Link to="/"  ><img src={logo} alt="UpRobotics" /> </Link></a>
+                <a className="#"><Link to="/"  ><img src={logo} alt="UpRobotics" /> </Link></a>
               </Link>
 
               <ul id="nav-mobile" className="right hide-on-med-and-down ">

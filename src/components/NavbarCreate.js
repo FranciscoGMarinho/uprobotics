@@ -13,22 +13,22 @@ import $ from 'jquery'
 class NavbarCreate extends React.Component {
   constructor(props) {
     super(props);
-}
+  }
 
   componentDidMount() {
     //inicia o materializeCSS
     M.AutoInit();
 
-    $(window).on('hashchange', function() {
-      return window.location.href='/editor'
+    $(window).on('hashchange', function () {
+      return window.location.href = '/editor'
     });
 
   }
 
-  close = () => { 
+  close = () => {
     const r = window.confirm("Ao sair, os seus blocos de códigos montados não serão salvos. Deseja continuar?")
-    if(r){
-     return window.location.href='/'
+    if (r) {
+      return window.location.href = '/'
     }
   }
 
@@ -41,23 +41,21 @@ class NavbarCreate extends React.Component {
         {/* NAVBAR */}
         <div className="navbar-fixed">
           <nav className="z-depth-0 ">
-            <div className="nav-wrapper white  ">
+            <div className="nav-wrapper white ">
+               {/* logo  */}
+              <Link onClick={this.close} className="marginleft ">
+                <a className="#"><Link  ><img src={logo} alt="UpRobotics" /> </Link></a>
+              </Link>
 
               {/*Esquerda*/}
-              <ul id="nav-mobile" className="left  ">
-                {/* logo-link */}
-                <li className="hover-0">
-                  <Link onClick={this.close}><img src={logo} alt="UpRobotics" /> </Link>
-                </li>
+              <ul id="nav-mobile" className="right hide-on-med-and-down ">
+             
+
                 {/* buttons de navegação */}
                 <li><a className="dropdown-trigger primary-color-text" data-target="dropdown-language"><i className="material-icons center">language</i></a></li>
                 <li><a className="dropdown-trigger primary-color-text" href="#" data-target="dropdown-arquivo">Arquivo</a></li>
                 <li><a className="primary-color-text" >Tutoriais</a></li>
-              </ul>
 
-              {/*Direita*/}
-              <ul id="nav-mobile" className="right hide-on-med-and-down ">
-                {/* button entar e Registar */}
                 <li><Link className="primary-color-text btn btn-user" to="/signin" exact>Entrar
                     </Link>
                 </li>
@@ -66,7 +64,11 @@ class NavbarCreate extends React.Component {
                 </li>
               </ul>
 
-
+                {/* menu sidnav invisivel para telas grandes  "hide-on-large-only"  */}
+                <a href="#" data-target="slide-out" className="sidenav-trigger  primary-color-text">
+                <i className="material-icons">menu</i>
+              </a>
+              
             </div>
           </nav>
 
